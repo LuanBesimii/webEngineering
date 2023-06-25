@@ -1,0 +1,12 @@
+.article-show {
+  height: 50px;
+  border: 1px solid gray;
+  padding: 0.75rem 1.25rem;
+  background-color: rgba(0, 0, 0, .03);
+  margin: 0;
+}
+
+.backbtn{
+  color:#FFFFFF;
+  text-decoration: none;
+}

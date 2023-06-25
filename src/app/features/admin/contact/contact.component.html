@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="card">
+    <div class="card-title">
+      <h4> Conctact</h4>
+    </div>
+
+    <div class="card-body">
+      <div class="row">
+        <div class="container">
+          <div class="d-flex justify-content-end  ">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <mat-form-field appearance="standard" class="full-width d-flex justify-content-end">
+
+            <mat-label>Filter</mat-label>
+            <input
+              matInput
+              (keyup)="applyFilter($event)"
+              placeholder="Search Columns"
+              #input
+            />
+          </mat-form-field>
+          <mat-table #table [dataSource]="dataSource" matSort>
+            <!-- First Column ID-->
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> ID</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+            </ng-container>
+
+            <!-- Second Column -->
+            <ng-container matColumnDef="name">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Full Name</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+            </ng-container>
+
+            <!-- Third Column -->
+            <ng-container matColumnDef="email">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Email</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.email}} </mat-cell>
+            </ng-container>
+            <!-- Fourth Column -->
+            <ng-container matColumnDef="subject">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> subject</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.subject}} </mat-cell>
+            </ng-container>
+            <!--            fifth column-->
+            <ng-container matColumnDef="created_at">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Created At</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.created_at}} </mat-cell>
+            </ng-container>
+            <!--            fifth column-->
+            <!-- Action Column -->
+            <ng-container matColumnDef="actions">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Actions</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <button mat-icon-button matTooltip="Click to View" class="iconbutton"
+                        color="primary" (click)="viewItem({element : element})">
+                  <mat-icon>remove_red_eye</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Click to Delete" class="iconbutton"
+                        (click)="delete({id : element.id})" color="warn">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

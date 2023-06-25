@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="card">
+    <div class="card-title">
+      <h4> About</h4>
+    </div>
+
+    <div class="card-body">
+      <div class="container">
+        <div class="row">
+          <form #aboutContent="ngForm" class="about-content d-grid" (ngSubmit)="onSubmit(aboutContent.value)">
+            <h5>Title:</h5>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <input matInput name="title" ngModel
+                     placeholder="{{title}}" value="{{title}}">
+            </mat-form-field>
+            <h5>Body:</h5>
+            <mat-form-field class="example-full-width" appearance="fill">
+              <textarea matInput name="body" ngModel  placeholder="{{body}}" value="{{body}}">{{body}}</textarea>
+            </mat-form-field>
+
+            <button type="sbmit" class="btn btn-primary"> Update</button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

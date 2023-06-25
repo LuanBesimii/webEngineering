@@ -1,0 +1,168 @@
+.footer {
+  padding-top: 10px;
+  height: 550px;
+  background-size: 100%  100% ; }
+.container{
+  max-width:1200px
+}
+.property-carret {
+  display: flex;
+  margin: 0 0 12px;
+}
+
+.footer-header {
+  font-family: Dosis;
+  font-size: 18px;
+  font-weight: 900;
+  color: #175d98;
+}
+
+.about-text {
+  font-family: Merriweather;
+  font-size: 15px;
+  font-weight: 700;
+  color: #959595;
+  padding-top: 5px;
+}
+
+
+.footer-content {
+
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-logo-img {
+  width: 113px;
+  height: 40px;
+}
+
+.copyright-text {
+  font-family: "Dosis", sans-serif;
+  color: #959595;
+  margin-top: 10px;
+  margin-left: 40px;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.agents {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.blog-items {
+  display: flex;
+  align-items: baseline;
+}
+
+.badge-success-blog {
+  font-family: Dosis;
+  font-size: 11px;
+  background-color: #70B247;
+  font-weight: 700;
+  width: 94px;
+  height: 14px;
+}
+
+.iconTime {
+  color: #959595;
+  font-size: 11px;
+  padding-left: 5px;
+}
+
+.from-blog-text1 {
+  font-family: Dosis;
+  font-size: 11px;
+  font-weight: 700;
+  color: #959595;
+}
+
+.from-blog-text {
+  font-family: Lora;
+  font-size: 14px;
+  font-weight: 700;
+  color: #959595;
+}
+
+.blog-post {
+  display: flex;
+  min-height: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    background-image: url("src/assets/img/footer-container.png");
+  }
+
+  .blog-img {
+    height: 100%;
+    width: 100%;
+    max-width: 82px;
+    max-height: 82px;
+
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .fieldset-item {
+    margin-bottom: 5px;
+  }
+
+  .offer-subtitle {
+    padding: 0;
+  }
+
+  .from-blog-text {
+    font-family: Lora;
+    font-size: 14px;
+    font-weight: 700;
+    color: #959595;
+  }
+
+  .from-blog-text1 {
+    font-size: 16px;
+  }
+
+  .badge-success {
+    font-family: Dosis;
+    font-size: 11px;
+    background-color: #70B247;
+    font-weight: 700;
+    width: 94px;
+    height: 14px;
+  }
+
+  .footer-content {
+    padding-top: 3px
+  }
+
+  .blog-img {
+    height: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+
+  .footer {
+    height: 1000px;
+  }
+
+}
+
+@media screen and (max-width: 1180px) {
+
+  .about-texts{
+    padding-left: 15px;
+  }
+}

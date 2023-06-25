@@ -1,0 +1,109 @@
+.container {
+  max-width: 1200px;
+}
+
+.fieldset {
+  border: 15px solid #cecece;
+  box-sizing: border-box;
+  grid-area: 1 / 1;
+  padding: 20px;
+  width: inherit;
+}
+
+.legend {
+  background: #cecece;
+  color: #70b247;
+  height: 15px;
+  padding: 0 4px;
+}
+
+.legend-text {
+  font-family: Dosis;
+  width: 15%;
+  color: #70B247;
+  justify-content: space-around;
+  background: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  margin-left: 42%;
+  margin-top: -42px;
+}
+
+.black-color-bg {
+  background-color: black;
+}
+
+.fieldset-item {
+  max-width: 520px;
+  width: 520px;
+  height: 295px;
+  max-height: 295px;
+
+}
+
+.fieldset-item1 {
+  max-width: 344px;
+  height: 295px;
+  max-height: 295px;
+
+}
+
+.fieldset-text {
+  font-family: Dosis;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.no-right {
+  padding-right: 0;
+}
+
+@media  (max-width: 1112px) {
+  .fieldset-item {
+    max-width: 400px;
+    height: 200px;
+  }
+
+  .fieldset-item1 {
+    max-width: 344px;
+
+  }
+}
+
+@media  (max-width: 768px) {
+  .fieldset-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .fieldset-item {
+    margin-bottom: 5px;
+  }
+
+  .no-right {
+    padding-right: 20px;
+  }
+
+  .tablet-mt-5 {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .fieldset-item {
+    max-width: 320px !important;
+    height: 200px;
+  }
+
+  .fieldset-item1 {
+    max-width: 320px;
+
+  }
+}

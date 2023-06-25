@@ -1,0 +1,12 @@
+<div class="admin-info">
+    <div class="d-flex flex-column">
+      <h5 class="name"></h5>
+    </div>
+</div>
+<mat-nav-list class="sidenav-list">
+  <a *ngFor="let item of items" mat-list-item [routerLink]="item.routerLink" routerLinkActive="active-list-item">
+    <mat-icon>{{item.iconName}}</mat-icon>
+    <span>{{item.viewName}}</span>
+  </a>
+</mat-nav-list>
+

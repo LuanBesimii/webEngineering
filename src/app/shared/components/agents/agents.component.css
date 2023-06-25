@@ -1,0 +1,46 @@
+
+.agent-header {
+  font-family: Dosis;
+  font-size: 32px;
+  font-weight: 900;
+  color: #175d98;
+  text-align: start;
+}
+
+.agent-header1 {
+  text-align: start;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  color: #70b247;
+}
+
+.agent-description {
+  text-align: start;
+  font-family: "Dosis", sans-serif;
+  color: #707070;
+
+}
+.buttons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:start;
+}
+.agent-button {
+  background: #175D98;
+  border:none;
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 50px;
+  height: 50px;
+}
+
+.agents {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 80px;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}

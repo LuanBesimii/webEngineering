@@ -1,0 +1,158 @@
+@import "~swiper/swiper-bundle.min.css";
+
+.container {
+  max-width: 1200px;
+}
+
+.row {
+  max-width: 1200px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  max-height: 700px;
+}
+
+.swiper-slide {
+  text-align: center;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mySwiper2 {
+  padding-bottom: 70px;
+}
+
+.deals-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.offer-title {
+  font-family: Dosis;
+  font-size: 32px;
+  font-weight: 700;
+  color: #70B247;
+  text-align: center;
+}
+
+.offer-subtitle {
+  font-family: Merriweather;
+  font-size: 14px;
+  font-weight: 700;
+  max-width: 930px;
+  color: #959595;
+  text-align: center;
+  padding-bottom: 40px;
+  margin: 0;
+}
+
+.deals-slide {
+}
+
+.card-title {
+  font-family: Dosis;
+  font-size: 18px;
+  font-weight: 700;
+  color: #959595;
+  text-align: start;
+}
+
+.card-description {
+  font-family: Merriweather;
+  font-weight: 400;
+  color: #959595;
+  text-align: start;
+}
+
+.card-price {
+  font-family: Merriweather;
+  font-weight: 400;
+  color: #70b247;
+  text-align: start;
+}
+
+.card-buttons {
+  justify-content: space-around;
+}
+
+.favBtn {
+  font-family: Dosis;
+  font-size: 14px;
+  font-weight: 700;
+  width: 145px;
+  height: 50px;
+  color: #70B247;
+}
+
+.priceBtn {
+  font-family: Dosis;
+  font-size: 14px;
+  font-weight: 700;
+  width: 145px;
+  height: 50px;
+  background-color: #175D98;
+  border-color: #175D98;
+}
+
+.favTxt {
+  padding-bottom: 5px;
+}
+
+@media (max-width:768px) {
+  .offer-subtitle {
+    padding: 20px
+  }
+  .slider-card{
+    padding-left:20px  ;
+    padding-right:20px ;
+  }
+.offer-title{
+  max-width: 420px;
+}
+  .offer-subtitle{
+  max-width: 420px;
+    padding-right: 0;
+}
+
+}
+@media (max-width:500px) {
+.deals-header{
+  max-width: 320px;
+}
+.offer-title{
+  max-width: 320px;
+  font-size: 24px;
+}
+  .offer-subtitle{
+  max-width: 320px;
+    font-size: 16px;
+}
+.deals-row{
+  max-width: 320px;
+}
+.mat-slider-wrapper{
+  max-width: 320px;
+}
+}

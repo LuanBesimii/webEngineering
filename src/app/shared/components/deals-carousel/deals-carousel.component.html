@@ -1,0 +1,109 @@
+<section style="background-color: rgb(252, 252, 252); margin-top: -60px;">
+  <div class="container">
+    <div class="col-md-12 large-search">
+      <div class="search-form">
+        <form [formGroup]="searchArticleFormGroup" (ngSubmit)="onSubmit()"  class="form-inline">
+          <div class="container search-container">
+            <div class="col-md-3 pr-0">
+              <select class="form-control location" id="select1" formControlName="city">
+                <option *ngFor="let city of cities " [value]="city">{{city}} </option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <select class="form-control location" id="select2" formControlName="offer_types">
+                <option *ngFor=" let offer_types of offer_types" [value]="offer_types">{{offer_types}}</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <select class="form-control location " id="select3" formControlName="type">
+                <option *ngFor=" let type of types"  [value]="type">{{type}}</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <form class="form-inline">
+                <input class="form-control location" type="search"
+                       placeholder="Enter Your Keyword" aria-label="Search"
+                       style="margin-right: 0; padding-right: 0;width: 100%">
+              </form>
+            </div>
+          </div>
+          <div class="col-md-12 search-container pt-4">
+            <div class="col-sm-12  col-md-6 col-lg-2 col-xl-2 pr-0 pl-0">
+              <select class="form-control bedroom" id="select4">
+                <option>Bedrooms</option>
+                <option>Bedrooms 1</option>
+                <option>Bedrooms 2</option>
+              </select>
+            </div>
+            <div class="col-sm-12  col-md-6 col-lg-2 col-xl-2 pr-0">
+              <select class="form-control bedroom" id="select5">
+                <option>Bathrooms</option>
+                <option>Bathrooms 1</option>
+                <option>Bathrooms 2</option>
+              </select>
+            </div>
+            <div class="col-sm-12  col-md-6 col-lg-3 col-xl-3">
+              <label class="slider-title">Price range: <b> 40.000 -180.000</b></label>
+              <div class="custom-slider">
+                <ngx-slider formControlName="slider" [(value)]="value" [(highValue)]="highValue" [options]="options"></ngx-slider>
+              </div>
+            </div>
+            <div class="col-sm-12  col-md-6 col-lg-3 col-xl-3">
+              <label class="slider-title">Square meter: <b> 50-130</b></label>
+              <div class="custom-slider">
+                <ngx-slider [(value)]="value1" [(highValue)]="highValue1" [options]="options1"></ngx-slider>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-12 col-lg-2 col-xl-2">
+              <button type="submit" class="btn btn-success search-button">Search</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="row deals-row">
+    <div class="deals-header">
+      <h3 class="offer-title">We are Offering the Best Real Estate Deals</h3>
+      <p class="offer-subtitle">Look at our latest listed properties and check out the facilities on
+        them
+        , We have already sold
+        more than 5,000 Homes and we are <br> still going at very good pace. WE would love to look into
+        these
+        properties and we hope that you will find something <br> match-able to your needs</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <swiper [config]="swiperConfig2" class="mySwiper2">
+    <ng-template swiperSlide *ngFor="let article of articles " class="deals-slide" >
+      <div class="card  slider-card" (click)="goToProperty(article.id)">
+        <img class=" card-img-top" *ngFor="let img of article.photo" src="http://realestate-task.draft2017.com/storage//photos/{{img.photo}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{article.title}}</h5>
+          <p class="card-description">{{article.city}}</p>
+          <p class="card-description d-flex">
+           <mat-icon>location_on</mat-icon>
+            {{article.address}}
+          </p>
+          <p class="card-price d-flex ">
+            <mat-icon> attach_money</mat-icon>
+            {{article.price}}
+          </p>
+          <p class="card-description">Type:</p>
+          <p class="card-description">
+          {{article.type}}
+          </p>
+        </div>
+      </div>
+    </ng-template>
+
+  </swiper>
+
+</div>

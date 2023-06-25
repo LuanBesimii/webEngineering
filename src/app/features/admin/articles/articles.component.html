@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="card">
+    <div class="card-title">
+      <h4> Articles</h4>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="container">
+          <div class="d-flex justify-content-end  ">
+            <button class="btn btn-primary" routerLink="/admin/articles/create">Create</button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="container">
+          <mat-form-field appearance="standard" class="full-width d-flex justify-content-end">
+
+
+            <mat-label>Filter</mat-label>
+            <input
+              matInput
+              (keyup)="applyFilter($event)"
+              placeholder="Search Columns"
+              #input
+            />
+          </mat-form-field>
+          <mat-table #table [dataSource]="dataSource" matSort>
+            <!-- First Column ID-->
+            <ng-container matColumnDef="id">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> ID</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+            </ng-container>
+
+            <!-- Second Column -->
+            <ng-container matColumnDef="title">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Title</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
+            </ng-container>
+
+            <!-- Third Column -->
+            <ng-container matColumnDef="city">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> City</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.city}} </mat-cell>
+            </ng-container>
+            <!-- Fourth Column -->
+            <ng-container matColumnDef="address">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Address</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.address }} </mat-cell>
+            </ng-container>
+            <!--            fifth column-->
+            <ng-container matColumnDef="type">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Type</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.type}} </mat-cell>
+            </ng-container>
+            <!--            fifth column-->
+            <ng-container matColumnDef="phonenumber">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Number</mat-header-cell>
+              <mat-cell *matCellDef="let element"> {{element.phonenumber }} </mat-cell>
+            </ng-container>
+            <!-- Action Column -->
+            <ng-container matColumnDef="actions">
+              <mat-header-cell *matHeaderCellDef mat-sort-header> Actions</mat-header-cell>
+              <mat-cell *matCellDef="let element">
+                <button mat-icon-button matTooltip="Click to View" class="iconbutton"
+                        color="primary" (click)="viewItem({element : element})">
+                  <mat-icon>remove_red_eye</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Click to Edit" class="iconbutton"
+                        color="primary" (click)="edit({element : element})">
+                  <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button matTooltip="Click to Delete" class="iconbutton"
+                        (click)="delete({id : element.id})" color="warn">
+                  <mat-icon>delete</mat-icon>
+                </button>
+              </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+
+          <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

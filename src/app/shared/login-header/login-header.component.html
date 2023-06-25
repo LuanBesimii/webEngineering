@@ -1,0 +1,23 @@
+<div>
+  <mat-toolbar class="header-background">
+    <mat-toolbar-row>
+        <button mat-icon-button (click)="onToggleOpenSidenav()" class="remove-outline-focus" fxShow="true" style="color:#FFFFFF">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span class="header-text">Pannel</span>
+      <span class="menu-spacer"></span>
+      <div fxShow="true" fxHide.lt-md>
+        <a  class="header-link" routerLink="/login" mat-button>Login</a>
+        <a  class="header-link"  routerLink="/register" mat-button>Register</a>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+<!--  <mat-sidenav-container fxFlexFill>-->
+<!--    <mat-sidenav #sidenav>-->
+<!--      <mat-nav-list>-->
+<!--        <a (click)="onToggleOpenSidenav()" href="" mat-list-item>Close</a>-->
+<!--      </mat-nav-list>-->
+<!--    </mat-sidenav>-->
+<!--  </mat-sidenav-container>-->
+</div>

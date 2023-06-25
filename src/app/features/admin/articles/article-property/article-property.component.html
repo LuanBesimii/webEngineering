@@ -1,0 +1,25 @@
+
+<div class=" container p-5">
+<p class="article-show">title: {{article.title}}</p>
+<p class="article-show">id: {{article.id}}</p>
+<p class="article-show">name: {{article.name}}</p>
+<p  class="article-show">body: {{article.body}}</p>
+<p class="article-show">city: {{article.city}}</p>
+<p class="article-show">addreess: {{article.address.toString()}}</p>
+<p class="article-show">for: {{article.for}}</p>
+<p class="article-show">price: {{article.price}}</p>
+<p class="article-show">views: {{article.views}}</p>
+<p class="article-show">type: {{article.type}}</p>
+<p class="article-show">available: {{article.available}}</p>
+<p class="article-show">number: {{article.phonenumber}}</p>
+<p class="article-show">created: {{article.created_at}}</p>
+<p class="article-show">updated: {{article.updated_at}}</p>
+</div>
+<div class="container p-5">
+<div class="row">
+  <div class="d-flex justify-content-between">
+    <button class="btn btn-secondary" ><a class="backbtn" routerLink="/admin/articles/list"><mat-icon style="padding-top:5px">keyboard_backspace</mat-icon>Back</a></button>
+    <button class="btn btn-secondary" (click)="edit({id : article.id})"> Edit</button>
+  </div>
+  </div>
+</div>

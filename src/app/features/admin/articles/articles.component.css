@@ -1,0 +1,14 @@
+
+.card{
+  margin-top: 100px;
+}
+.card-title{
+  padding: 15px;
+  border: 1px solid lightgray;
+  background-color: lightgray;
+  font-weight: 200;
+  font-size: 18px;
+}
+table{
+  width: 100%;
+}

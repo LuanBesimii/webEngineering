@@ -1,0 +1,13 @@
+<app-login-header (SideNavigationToggle)="sidenav.toggle()"></app-login-header>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" opened="true" fixedInViewport="true">
+    <app-admin-side-nav (closeSideNavigation)="sidenav.close()" [items]="adminSideNavItems"></app-admin-side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="container-fluid pt-5">
+      <main>
+        <router-outlet></router-outlet>
+      </main>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
